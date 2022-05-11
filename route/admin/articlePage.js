@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
     // populate函数未知错误
     articles = JSON.stringify(articles);
     articles = JSON.parse(articles);
-    console.log(articles.records)
+    // console.log(articles.records)
 
     res.render('admin/article', {
         articles,
