@@ -47,16 +47,16 @@
     </nav>
     
     <div class="container">
-    <div class="row">
-        {{block 'asider'}}
-        {{/block}}
-        {{block 'main'}}
-        {{/block}}
-    </div>
+        <div class="row">
+            {{block 'asider'}}
+            {{/block}}
+            {{block 'main'}}
+            {{/block}}
+        </div>
     </div>
     
     <div class="jumbotron text-center" style="margin-bottom:0">
-    <p>已经到了我的底线(ง •_•)ง</p>
+        <p>已经到了我的底线(ง •_•)ง</p>
     </div>
 </body>
     {{block 'script'}}

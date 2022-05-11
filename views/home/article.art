@@ -6,7 +6,7 @@
 {{block 'main'}}
 	<!-- 文章框架开始 -->
 	<div class="article">
-		<div class="w1100">
+		<div class="">
 			<div class="container">
 				<div class="article-header">
 					<h3 class="article-title">{{article.title}}</h3>
@@ -19,6 +19,7 @@
 					{{@article.content}}
 				</div>
 				<div class="fakeimg"><img class="img-responsive" alt="140x140" src="{{article.cover? article.cover: '/home/images/back.jpg'}}" /></div>
+				<br>
 				<div class="article-comment">
 					<h4>评论</h4>
 					

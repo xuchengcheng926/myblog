@@ -11,10 +11,12 @@
             {{each articles.records}}
             <div class="articale-card">
                 <h3><a href="/home/article?id={{@$value._id}}" class="conts-titlename">{{$value.title}}</a></h3>
-                <h5><div class="conts-text-tags">{{$value.author.username}}</h5>
-                <h5><div class="conts-text-tags">{{dataFormat($value.publishDate).format("YYYY-MM-DD HH:mm")}}</h5>
+                <h5><div class="conts-text-tags">{{$value.author.username}} | {{dataFormat($value.publishDate).format("YYYY-MM-DD HH:mm")}}</div></h5>
                 <div class="fakeimg"><img class="img-responsive" alt="140x140" src="{{$value.cover? $value.cover: '/home/images/back.jpg'}}" /></div>
-                <p><div class="conts-text-descs">{{@$value.content.substr(0, 20) + '...'}}</div></p>         
+                <br>
+                <p><div class="conts-text-descs">{{@$value.content.substr(0, 20) + '...'}}</div></p>  
+                <br>
+                       
             </div> 
             {{/each}}
         </div>
