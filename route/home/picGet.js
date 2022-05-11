@@ -6,15 +6,17 @@ var targetOptions = {
     encoding: null,
     proxy: 'http://H9723uEzQK:ljesQqIotK@20.187.88.97:41026',
     Headers: {
-        'User-Agent': '',
+        'User-Agent': 'user-agent',
     }
 };
 
 module.exports = async (req, res) => {
     // console.log(req.query)
-    targetOptions.Headers['User-Agent'] = req.headers['user-agent'],
+    // targetOptions.Headers['User-Agent'] = req.headers['user-agent']
     // console.log(targetHost + req.originalUrl.split('/pic')[1])
-    request.get(targetHost + req.originalUrl.split('/pic')[1], targetOptions, (error, response, body) => {
+    const url = targetHost + req.originalUrl.split('/pic')[1]
+    // console.log(targetOptions)
+    request.get(url, targetOptions, (error, response, body) => {
         if (error) {
             console.log('over',error)
             res.writeHead(404, {})

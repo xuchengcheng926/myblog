@@ -26,7 +26,7 @@
                 <a href="/home?page={{articles.page - 1}}">上一页</a>
                 {{/if}}
                 {{each articles.display}}
-                <a class={{articles.page == $value? 'active': ''}} href="/home?page={{$value}}">{{$value}}</a>
+                <a class="{{articles.page == $value? 'active': ''}}" href="/home?page={{$value}}">{{$value}}</a>
                 {{/each}}
                 {{if articles.page != articles.pages}}
                 <a href="/home?page={{articles.page - 0 + 1}}">下一页</a>
