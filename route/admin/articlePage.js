@@ -11,7 +11,6 @@ module.exports = async (req, res) => {
     articles = JSON.parse(articles);
     // console.log(articles.records)
 
-    // he
     res.render('admin/article', {
         articles,
         activeSide: "articleManage"
