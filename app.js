@@ -6,6 +6,7 @@ const template = require('art-template');
 const moment = require('moment');
 const bodyparser = require('body-parser');
 const session = require('express-session');
+const config = require('config')
 
 
 // 连接数据库
@@ -45,6 +46,5 @@ app.get('/', (req, res) => {
 app.use('/home', home);
 app.use('/admin', admin);
 
-
-
-app.listen(800);
+// 启动服务
+app.listen(config.get("servePort"));
