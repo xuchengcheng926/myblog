@@ -1,0 +1,42 @@
+{{extend './common/layout.art'}}
+{{block 'asider'}}
+    {{include './common/aside.art'}}
+{{/block}}
+{{block 'link'}}
+	<link rel="stylesheet" href="css/index.css">
+{{/block}}
+{{block 'main'}}
+    <div class="col-sm-8">
+        <div class="articale-cards" id="articale-cards">
+            {{each articles.records}}
+            <div class="articale-card">
+                <h3><a href="/home/article?id={{@$value._id}}" class="conts-titlename">{{$value.title}}</a></h3>
+                <h5><div class="conts-text-tags">{{$value.author.username}}</h5>
+                <h5><div class="conts-text-tags">{{dataFormat($value.publishDate).format("YYYY-MM-DD HH:mm")}}</h5>
+                <div class="fakeimg"><img class="img-responsive" alt="140x140" src="{{$value.cover? $value.cover: '/home/images/back.jpg'}}" /></div>
+                <p><div class="conts-text-descs">{{@$value.content.substr(0, 20) + '...'}}</div></p>         
+            </div> 
+            {{/each}}
+        </div>
+        <br>
+        <div class="row clearfix " >
+            <!-- 分页开始 -->
+            <div class="page w1100">
+                {{if articles.page != 1}}
+                <a href="/home?page={{articles.page - 1}}">上一页</a>
+                {{/if}}
+                {{each articles.display}}
+                <a class={{articles.page == $value? 'active': ''}} href="/home?page={{$value}}">{{$value}}</a>
+                {{/each}}
+                {{if articles.page != articles.pages}}
+                <a href="/home?page={{articles.page - 0 + 1}}">下一页</a>
+                {{/if}}
+            </div>
+            <!-- 分页结束 -->
+        </div>
+        <br>
+    </div>
+    
+{{/block}}
+
+

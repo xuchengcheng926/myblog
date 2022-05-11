@@ -1,0 +1,15 @@
+<div class="col-sm-4">
+    <h2>关于此站</h2>
+    <h5>CHENGS</h5>
+    <div class="fakeimg"><img width="100" src="https://chengs.run/upload/2021/09/98669E6B-9643-4829-A9D9-FD8473CB3F06-17ffa68ba43344da9a3b75dcd600db20.jpeg" class="img-circle"> </div>
+    <br>
+    <p>此站为课程实习期间所作，用于学习</p>
+    <!-- <h3>链接</h3>
+    <p>描述文本。</p>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">链接 1</a></li>
+        <li><a href="https://chengs.run">我的博客</a></li>
+        <li><a href="#">链接 3</a></li>
+    </ul>
+    <hr class="hidden-sm hidden-md hidden-lg"> -->
+</div>
