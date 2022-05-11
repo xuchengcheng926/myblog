@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const home = require('./route/home');
 const admin = require('./route/admin');
+const userInfo = require('./route/userInfo');
 const template = require('art-template');
 const moment = require('moment');
 const bodyparser = require('body-parser');
@@ -45,6 +46,7 @@ app.get('/', (req, res) => {
 })
 app.use('/home', home);
 app.use('/admin', admin);
+app.use('/userInfo', userInfo);
 
 // 启动服务
 app.listen(config.get("servePort"));

@@ -18,7 +18,9 @@
 				<div class="article-content">
 					{{@article.content}}
 				</div>
-				<div class="fakeimg"><img class="img-responsive" alt="140x140" src="{{article.cover? article.cover: ''}}" /></div>
+				{{if article.cover}}
+				<div class="fakeimg"><img class="img-responsive" alt="140x140" src="{{article.cover}}" /></div>
+				{{/if}}
 				<br>
 				<div class="article-comment">
 					<h4>评论</h4>

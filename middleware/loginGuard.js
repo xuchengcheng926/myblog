@@ -2,10 +2,14 @@ const guard = (req, res, next) => {
 	if (req.url != '/login' && !req.session.user) {
 		res.redirect('/admin/login');
 	} else {
+		// console.log(req.url)
 		// 如果用户是登录状态 并且是一个普通用户
 		if (req.session.user && req.session.user.role == 'normal') {
-			// 让它跳转到博客首页 阻止程序向下执行
-			return res.redirect('/home/')
+			// 当用户为普通用户时，只有用户登出接口允许访问，其他都会跳转至userInfo页面
+			if(req.url == '/logout'){
+				return next();
+			}
+			return res.redirect('/userInfo')
 		}
 		// 用户是登录状态 将请求放行
 		next();
